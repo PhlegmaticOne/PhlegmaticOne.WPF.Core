@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>PhlegmaticOne.WPF.Core</Title>
+    <Company>Phlegmatic</Company>
+    <Description>Contains types for creating ViewModels and Commands in WPF application</Description>
+    <Version>1.1.1</Version>
+    <PackageProjectUrl>https://github.com/PhlegmaticOne/PhlegmaticOne.WPF.Core</PackageProjectUrl>
+    <PackageIcon>Logo - Copy.png</PackageIcon>
+    <RepositoryUrl>https://github.com/PhlegmaticOne/PhlegmaticOne.WPF.Core.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReleaseNotes>Added implementation of Commands and base ViewModels</PackageReleaseNotes>
+    <PackageTags>WPF;Core;Command;Commands;ViewModel;ViewModels;MVVM</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+</Project>

@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhlegmaticOne.WPF.Core", "PhlegmaticOne.WPF.Core\PhlegmaticOne.WPF.Core.csproj", "{532B0848-6D34-4C28-A8F0-E941C7E84B54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhlegmaticOne.WPF.Core", "src\PhlegmaticOne.WPF.Core\PhlegmaticOne.WPF.Core.csproj", "{C116DEED-571D-46B0-A5B0-A59DDE092233}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2B759B9E-8F70-4140-A56A-5C3B918B22D1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{16B26CD5-15FE-4E1D-AD46-3AD0E11B9718}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhlegmaticOne.WPF.Core.Sample", "Sample\PhlegmaticOne.WPF.Core.Sample\PhlegmaticOne.WPF.Core.Sample.csproj", "{9AD9731B-33B3-404F-AE74-38FCD36EEF7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,13 +17,21 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{532B0848-6D34-4C28-A8F0-E941C7E84B54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{532B0848-6D34-4C28-A8F0-E941C7E84B54}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{532B0848-6D34-4C28-A8F0-E941C7E84B54}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{532B0848-6D34-4C28-A8F0-E941C7E84B54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C116DEED-571D-46B0-A5B0-A59DDE092233}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C116DEED-571D-46B0-A5B0-A59DDE092233}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C116DEED-571D-46B0-A5B0-A59DDE092233}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C116DEED-571D-46B0-A5B0-A59DDE092233}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AD9731B-33B3-404F-AE74-38FCD36EEF7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AD9731B-33B3-404F-AE74-38FCD36EEF7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AD9731B-33B3-404F-AE74-38FCD36EEF7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AD9731B-33B3-404F-AE74-38FCD36EEF7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C116DEED-571D-46B0-A5B0-A59DDE092233} = {2B759B9E-8F70-4140-A56A-5C3B918B22D1}
+		{9AD9731B-33B3-404F-AE74-38FCD36EEF7B} = {16B26CD5-15FE-4E1D-AD46-3AD0E11B9718}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0F718FFA-5EC2-4E4D-A24D-166668067BED}
