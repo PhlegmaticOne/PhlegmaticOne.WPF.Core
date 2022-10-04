@@ -20,21 +20,28 @@ internal class AsyncRelayGenericCommand<T> : RelayCommandBase
 
     public override async void Execute(object? parameter)
     {
-        if (parameter is not T && _isRequired)
+        if (parameter is not T generic)
         {
+            if (_isRequired == false)
+            {
+                await Invoke(default);
+            }
             return;
         }
-        var generic = (T)parameter!;
+
+        await Invoke(generic);
+    }
+    private async Task Invoke(T? parameter)
+    {
         SetIsExecuting(true);
         try
         {
-            await _action.Invoke(generic);
+            await _action.Invoke(parameter);
         }
         catch (Exception exception) when (_onException is not null)
         {
             _onException.Invoke(exception);
         }
         SetIsExecuting(false);
-        
     }
 }

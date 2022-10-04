@@ -12,8 +12,8 @@ public class AlbumViewModel : ApplicationBaseViewModel
 	public AlbumViewModel(IAlbumRepository albumRepository)
 	{
 		Album = albumRepository.GetAlbum();
-		RemoveTrackCommand = RelayCommandFactory.CreateRequiredParameterCommand<TrackModel>(RemoveTrack, _ => true);
-		AddTrackCommand = RelayCommandFactory.CreateEmptyCommand(AddTrack, _ => true);
+		RemoveTrackCommand = RelayCommandFactory.CreateRequiredParameterCommand<TrackModel>(RemoveTrack);
+		AddTrackCommand = RelayCommandFactory.CreateEmptyCommand(AddTrack);
 	}
 
 	public IRelayCommand RemoveTrackCommand { get; }

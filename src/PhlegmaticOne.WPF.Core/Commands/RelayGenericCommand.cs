@@ -16,14 +16,21 @@ internal class RelayGenericCommand<T> : RelayCommandBase
     }
     public override void Execute(object? parameter)
     {
-        if (parameter is not T && _isRequired)
+        if(parameter is not T generic)
         {
+            if(_isRequired == false)
+            {
+                Invoke(default);
+            }
             return;
         }
-        var generic = (T)parameter!;
 
+        Invoke(generic);
+    }
+    private void Invoke(T? parameter)
+    {
         SetIsExecuting(true);
-        _action.Invoke(generic);
+        _action.Invoke(parameter);
         SetIsExecuting(false);
     }
 }
