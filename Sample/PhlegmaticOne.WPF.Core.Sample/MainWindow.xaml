@@ -18,7 +18,12 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <TextBox Grid.Row="0" Text="{Binding Album.Title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <Grid Grid.Row="0">
+                <StackPanel Orientation="Horizontal">
+                    <TextBox Text="{Binding Album.Title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <Button Content="Create track" Command="{Binding AddTrackCommand}"/>
+                </StackPanel>
+            </Grid>
             <ListView Grid.Row="1" 
                       ItemsSource="{Binding Album.Tracks}">
                 <ListView.ItemContainerStyle>

@@ -13,7 +13,7 @@
     <PackageIcon>Logo.png</PackageIcon>
     <RepositoryUrl>https://github.com/PhlegmaticOne/PhlegmaticOne.WPF.Core.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageReleaseNotes>Added implementation of Commands and base ViewModels</PackageReleaseNotes>
+    <PackageReleaseNotes>Commands without parameters in methods added</PackageReleaseNotes>
     <PackageTags>WPF;Core;Command;Commands;ViewModel;ViewModels;MVVM</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
