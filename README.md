@@ -32,7 +32,7 @@ public class AlbumViewModel : ApplicationBaseViewModel
 public class AlbumViewModel : ApplicationBaseViewModel
 {
 	...
-  public AlbumViewModel(IAlbumRepository albumRepository)
+  public AlbumViewModel(...)
   {
       ...
       RemoveTrackCommand = RelayCommandFactory.CreateRequiredParameterCommand<TrackModel>(RemoveTrack, _ => true);
@@ -45,3 +45,5 @@ public class AlbumViewModel : ApplicationBaseViewModel
   ...
 }
 ```
+
+## Also sample on GitHub is available
