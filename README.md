@@ -15,4 +15,33 @@ PM> NuGet\Install-Package PhlegmaticOne.WPF.Core -Version 1.1.1
 
 To avoid this install the package [PropertyChanged.Fody](https://www.nuget.org/packages/PropertyChanged.Fody/)
 
-And then see sample :)
+## WPF Models
+```csharp
+public class AlbumModel : EntityBaseViewModel
+{...}
+```
+
+## WPF ViewModels
+```csharp
+public class AlbumViewModel : ApplicationBaseViewModel
+{...}
+```
+
+## WPF Commands Creation
+```csharp
+public class AlbumViewModel : ApplicationBaseViewModel
+{
+	...
+  public AlbumViewModel(IAlbumRepository albumRepository)
+  {
+      ...
+      RemoveTrackCommand = RelayCommandFactory.CreateRequiredParameterCommand<TrackModel>(RemoveTrack, _ => true);
+  }
+  public IRelayCommand RemoveTrackCommand { get; }
+  private void RemoveTrack(TrackModel track)
+  {
+      Album.Tracks.Remove(track);
+  }
+  ...
+}
+```
