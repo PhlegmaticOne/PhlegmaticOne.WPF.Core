@@ -5,10 +5,9 @@ namespace PhlegmaticOne.WPF.Core.Commands;
 internal class RelayEmptyCommand : RelayCommandBase
 {
     private readonly Action _action;
-    public RelayEmptyCommand(Action action, Predicate<object?> canExecute) : base(canExecute)
-    {
-        _action = action;
-    }
+    public RelayEmptyCommand(Action action,
+        Predicate<object?>? canExecute = null) : base(canExecute) => 
+        _action = action ?? throw new ArgumentNullException(nameof(action));
 
     public override void Execute(object? parameter)
     {

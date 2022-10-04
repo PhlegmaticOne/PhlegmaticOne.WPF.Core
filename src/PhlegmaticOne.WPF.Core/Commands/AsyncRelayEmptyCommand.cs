@@ -8,10 +8,10 @@ internal class AsyncRelayEmptyCommand : RelayCommandBase
     private readonly Action<Exception>? _onException;
 
     internal AsyncRelayEmptyCommand(Func<Task> action, 
-        Predicate<object?> canExecute,
+        Predicate<object?>? canExecute = null,
         Action<Exception>? onException = null) : base(canExecute)
     {
-        _action = action;
+        _action = action ?? throw new ArgumentNullException(nameof(action));
         _onException = onException;
     }
 

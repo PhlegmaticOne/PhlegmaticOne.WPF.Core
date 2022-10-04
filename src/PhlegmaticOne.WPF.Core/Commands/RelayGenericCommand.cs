@@ -8,15 +8,15 @@ internal class RelayGenericCommand<T> : RelayCommandBase
     private readonly bool _isRequired;
 
     internal RelayGenericCommand(Action<T?> action,
-        Predicate<object?> canExecute,
+        Predicate<object?>? canExecute = null,
         bool isRequired = false) : base(canExecute)
     {
-        _action = action;
+        _action = action ?? throw new ArgumentNullException(nameof(action));
         _isRequired = isRequired;
     }
     public override void Execute(object? parameter)
     {
-        if (parameter is not T && _isRequired )
+        if (parameter is not T && _isRequired)
         {
             return;
         }

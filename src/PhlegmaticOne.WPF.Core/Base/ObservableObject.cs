@@ -3,6 +3,9 @@ using System.Runtime.CompilerServices;
 
 namespace PhlegmaticOne.WPF.Core.Base;
 
+/// <summary>
+/// Base object for Models and ViewModels that implements INotifyPropertyChanged
+/// </summary>
 public class ObservableObject : INotifyPropertyChanged
 {
     public event PropertyChangedEventHandler? PropertyChanged;

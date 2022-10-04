@@ -9,11 +9,11 @@ internal class AsyncRelayGenericCommand<T> : RelayCommandBase
     private readonly bool _isRequired;
 
     internal AsyncRelayGenericCommand(Func<T?, Task> action,
-        Predicate<object?> canExecute,
+        Predicate<object?>? canExecute = null,
         Action<Exception>? onException = null,
         bool isRequired = false) : base(canExecute)
     {
-        _action = action;
+        _action = action ?? throw new ArgumentNullException(nameof(action));
         _onException = onException;
         _isRequired = isRequired;
     }
