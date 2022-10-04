@@ -8,7 +8,7 @@
 
 ### Installation
 ```
-PM> NuGet\Install-Package PhlegmaticOne.WPF.Core -Version 1.1.3
+PM> NuGet\Install-Package PhlegmaticOne.WPF.Core -Version 1.1.4
 ```
 ## Usage
 ```BaseViewModel``` from [PhlegmaticOne.WPF.Core](https://www.nuget.org/packages/PhlegmaticOne.WPF.Core/) package implements ```INotifyPropertyChanged```, but in ViewModels that you will create you need to invoke ```OnPropertyChanged``` method in all properties in every your ViewModel explicitly.
